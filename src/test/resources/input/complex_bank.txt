@@ -1,0 +1,27 @@
+open john my-account
+deposit john my-account 20
+open john erasmus-account
+deposit john erasmus-account 2000
+acc-balance john
+open frank frank-is-awesome
+deposit frank frank-is-awesome 5000
+open frank money-saving
+deposit frank money-saving 100
+open frank for-kids
+deposit frank for-kids 1000
+acc-balance frank
+withdraw frank frank-is-awesome 6000
+deposit frank for-kids 6000
+acc-balance frank
+list frank
+deposit frank money-saving 1500
+close frank money-saving frank-is-awesome
+acc-balance frank
+balance frank
+withdraw john erasmus-account 500
+withdraw john erasmus-account 1500
+acc-balance john
+close john erasmus-account
+acc-balance john
+list john
+exit

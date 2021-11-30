@@ -1,0 +1,5 @@
+open john my-account
+deposit john my-account 20
+acc-balance john
+list john
+exit
