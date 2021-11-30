@@ -42,6 +42,18 @@ public class Bank {
      * Runs the bank - an endless loop for accepting and processing user input.
      */
     public void run() {
+        System.out.println("== Welcome to the bank! ===\n==========================================================\n" +
+                "To use the bank, please use following commands:\n" +
+                " - 'open <customer> <account name>' to open a bank account\n" +
+                " - 'close <customer> <account name> <transferred account>' to close an account and transfer money to " +
+                "other account (may be left empty)\n" +
+                " - 'deposit <customer> <account> <value>' to deposit money to a bank account\n" +
+                " - 'withdraw <customer> <account> <value>' to withdraw money from a bank account\n" +
+                " - 'acc-balance <customer>' to see account balances of a customer\n" +
+                " - 'balance <customer>' to see total net worth of a customer at the bank\n" +
+                " - 'list <customer>' to see the history of operations of the customer\n" +
+                " - 'exit' to close the bank\n");
+
         while (true) {
             String input = getInput();
 
