@@ -1,17 +1,17 @@
-package it.unibz.cosode.eventsoucing.structures.event;
+package it.unibz.cosode.eventsoucing.basebank.structures.event;
 
-import it.unibz.cosode.eventsoucing.structures.Customer;
+import it.unibz.cosode.eventsoucing.basebank.structures.domain.Customer;
 
 /**
  * A class representing a single opening of an account event.
  *
  * @author ajurco
  */
-public class NewAccountEvent extends Event {
+public class NewAccountBankEvent extends BankEvent {
 
     private final String accountName;
 
-    public NewAccountEvent(String customerName, String accountName) {
+    public NewAccountBankEvent(String customerName, String accountName) {
         super(customerName);
         this.accountName = accountName;
     }

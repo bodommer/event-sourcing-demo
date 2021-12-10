@@ -1,14 +1,14 @@
-package it.unibz.cosode.eventsoucing.structures.event;
+package it.unibz.cosode.eventsoucing.basebank.structures.event;
 
-import it.unibz.cosode.eventsoucing.structures.Account;
-import it.unibz.cosode.eventsoucing.structures.Customer;
+import it.unibz.cosode.eventsoucing.basebank.structures.domain.Account;
+import it.unibz.cosode.eventsoucing.basebank.structures.domain.Customer;
 
 /**
  * A class representing a single close account event.
  *
  * @author ajurco
  */
-public class CloseAccountEvent extends Event {
+public class CloseAccountBankEvent extends BankEvent {
 
     private final String accountName;
     private final String transferredAccount;
@@ -20,7 +20,7 @@ public class CloseAccountEvent extends Event {
      * @param accountName        the account to be closed
      * @param transferredAccount the account of the customer to which the money shall be transferred (may be empty)
      */
-    public CloseAccountEvent(String customerName, String accountName, String transferredAccount) {
+    public CloseAccountBankEvent(String customerName, String accountName, String transferredAccount) {
         super(customerName);
         this.accountName = accountName;
         this.transferredAccount = transferredAccount;
@@ -29,8 +29,7 @@ public class CloseAccountEvent extends Event {
     @Override
     public void performOperation(Customer customer) {
         if (customer == null) {
-            System.err.printf("Unable to perform a new account operation for customer %s" +
-                    " - this customer does not exist!%n", customerName);
+
             return;
         }
 

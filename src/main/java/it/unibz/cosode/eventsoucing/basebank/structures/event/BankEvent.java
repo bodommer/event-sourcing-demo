@@ -1,6 +1,6 @@
-package it.unibz.cosode.eventsoucing.structures.event;
+package it.unibz.cosode.eventsoucing.basebank.structures.event;
 
-import it.unibz.cosode.eventsoucing.structures.Customer;
+import it.unibz.cosode.eventsoucing.basebank.structures.domain.Customer;
 
 import java.util.Date;
 import java.util.UUID;
@@ -10,7 +10,7 @@ import java.util.UUID;
  *
  * @author ajurco
  */
-public abstract class Event {
+public abstract class BankEvent {
 
     private final UUID id = UUID.randomUUID();
     private final Date created = new Date();
@@ -25,7 +25,7 @@ public abstract class Event {
      *
      * @param customerName the name of the customer associated to this instance
      */
-    protected Event(String customerName) {
+    protected BankEvent(String customerName) {
         this.customerName = customerName;
     }
 

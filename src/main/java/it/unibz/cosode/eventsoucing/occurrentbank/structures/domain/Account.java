@@ -1,4 +1,4 @@
-package it.unibz.cosode.eventsoucing.structures;
+package it.unibz.cosode.eventsoucing.occurrentbank.structures.domain;
 
 /**
  * A class representing a customer's account. Provides basic functionality performed on an account
@@ -36,9 +36,6 @@ public class Account {
      * @param value the value to be withdrawn
      */
     public void withdraw(int value) {
-        if (balance >= 0 && balance - value < 0) {
-            System.err.printf("Account %s is overdrawn!%n", this.name);
-        }
         balance = balance - value;
     }
 

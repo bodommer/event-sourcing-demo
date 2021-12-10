@@ -1,4 +1,4 @@
-package it.unibz.cosode.eventsoucing.structures;
+package it.unibz.cosode.eventsoucing.occurrentbank.structures.domain;
 
 import java.util.Collection;
 import java.util.HashMap;
